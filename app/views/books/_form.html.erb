@@ -15,6 +15,18 @@
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
   </div>
+  <div>
+    <%= form.label :author, style: "display: block" %>
+    <%= form.text_field :author %>
+  </div>
+  <div>
+    <%= form.label :price, style: "display: block" %>
+    <%= form.text_field :price %>
+  </div>
+  <div>
+    <%= form.label :published_date %>
+    <%= form.date_select :published_date, start_year: Date.current.year - 100, end_year: Date.current.year, order: [:month, :day, :year] %>
+  </div>
 
   <div>
     <%= form.submit %>
