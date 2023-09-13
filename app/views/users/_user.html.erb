@@ -1,0 +1,8 @@
+<div id="<%= dom_id user %>" style="display:inline;">
+  <tr>
+    <td><%= user.username %></td>
+    <td><%= link_to "Show", user %></td>
+    <td><%= link_to "Edit", edit_user_path(user) %></td>
+    <td><%= link_to "Destroy", delete_user_path(user) %></td>
+  <tr>
+</div>
