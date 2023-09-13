@@ -1,7 +1,21 @@
 Rails.application.routes.draw do
-  root 'books#index'
+  resources :user_books
+  resources :users
+  root 'user_books#index'
   
   resources :books do
+    member do
+      get :delete
+    end
+  end
+
+  resources :users do
+    member do
+      get :delete
+    end
+  end
+
+  resources :user_books do
     member do
       get :delete
     end
@@ -12,4 +26,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  # 'books#index'
 end
